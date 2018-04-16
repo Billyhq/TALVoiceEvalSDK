@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TALVoiceEvalSDK"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Baidu Cloud Push Service client library"
   s.description  = "Baidu Cloud Push Service client library for iOS (static lib), Supports iPhone Simulator (i386), armv7, armv7s."
   s.homepage     = "http://developer.baidu.com/cloud/push"
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   }
 
   s.author       = { 'Baidu Inc' => 'support@baidu.com' }
-  s.source       = { :git => "https://github.com/Billyhq/TALVoiceEvalSDK.git", :tag => '1.0.0' }
+  s.source       = { :git => "https://github.com/Billyhq/TALVoiceEvalSDK.git", :tag => '1.0.1' }
 
   s.platform     = :ios, '8.0'
   s.source_files = 'heads/*.h'
