@@ -1,22 +1,20 @@
 Pod::Spec.new do |s|
   s.name         = "TALVoiceEvalSDK"
-  s.version      = "1.0.2"
-  s.summary      = "Baidu Cloud Push Service client library"
-  s.description  = "Baidu Cloud Push Service client library for iOS (static lib), Supports iPhone Simulator (i386), armv7, armv7s."
-  s.homepage     = "http://developer.baidu.com/cloud/push"
-  s.license	     = {
+  s.version      = "2.0.0"
+  s.summary      = "TALVoiceEvalSDK"
+  s.description  = "library for iOS (static lib), Supports iPhone Simulator and device"
+  s.homepage     = "http://ailab.100tal.com/"
+  s.license          = {
       :type => 'Copyright',
       :text => <<-LICENCE
-      Copyright 2013 Baidu. All rights reserved.
+      Copyright 2018 TAL AILab. All rights reserved.
       LICENCE
   }
 
-  s.author       = { 'Baidu Inc' => 'support@baidu.com' }
-  s.source       = { :git => "https://github.com/Billyhq/TALVoiceEvalSDK.git", :tag => '1.0.2' }
+  s.author       = { 'He Qiang' => 'heqiang001@100tal.com' }
+  s.source       = { :git => "https://github.com/Billyhq/TALVoiceEvalSDK.git", :tag => s.version }
 
   s.platform     = :ios, '8.0'
   s.source_files = 'heads/*.h'
   s.vendored_libraries = 'libs/*.a'
-
-  #s.dependency 'JSONKit'
 end
