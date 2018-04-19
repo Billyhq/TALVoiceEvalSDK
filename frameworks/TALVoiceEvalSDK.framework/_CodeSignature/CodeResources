@@ -28,14 +28,6 @@
 		<data>
 		QvcWyglfFpDyHaNV9Z/v7sa1wkk=
 		</data>
-		<key>SingSound.Bundle/resources.zip</key>
-		<data>
-		5fryAPUEj7B76A/c3stFP5j8jKQ=
-		</data>
-		<key>SingSound.Bundle/vad.0.1.bin</key>
-		<data>
-		cuU0E8tb/B7quuYIgZOa2q3heCA=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -92,28 +84,6 @@
 			<key>hash2</key>
 			<data>
 			sdD7ck06Yv3xamXwXASpAT8UOR8h1QMpwMc2Tv1PNrY=
-			</data>
-		</dict>
-		<key>SingSound.Bundle/resources.zip</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			5fryAPUEj7B76A/c3stFP5j8jKQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			W7fZpWD7grNilwqP20m6etX7YQDDJW7pQ//6qfh172o=
-			</data>
-		</dict>
-		<key>SingSound.Bundle/vad.0.1.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			cuU0E8tb/B7quuYIgZOa2q3heCA=
-			</data>
-			<key>hash2</key>
-			<data>
-			Od9JRMAzE0HkPqRxpSVEvxAe6mqWk2vtlDL8Kv+AD8U=
 			</data>
 		</dict>
 	</dict>
