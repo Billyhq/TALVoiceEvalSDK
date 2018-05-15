@@ -19,11 +19,14 @@ typedef NS_ENUM(NSInteger, TALAILabVEECoreType) {
     TALAILabVEECoreTypePicture,                                //看图作文
     TALAILabVEECoreTypeChineseWord,                            //中文单词，只支持在线
     TALAILabVEECoreTypeChineseSentence,                        //中文句子，只支持在线
+    TALAILabVEECoreTypeChinesePcha,                            //中文有限分支识别评测,这个题型需要设置anwserArr
+    TALAILabVEECoreTypeChinesePred,                            //中文段落
+    TALAILabVEECoreTypeEnglishPcha,                            //英文有限分支识别评测,这个题型需要设置anwserArr
     TALAILabVEECoreTypeAlpha,                                  //字母评测
     TALAILabVEECoreTypeRec,                                    //自由识别
     TALAILabVEECoreTypePcha,                                   //句子选读
     TALAILabVEECoreTypeRetell,                                 //故事复述
-    
+    TALAILabVEECoreTypePche,                                   //扩展选择
 };
 
 //评分精确度
@@ -134,6 +137,11 @@ typedef NS_ENUM(NSInteger, TALAILabMixedType) {
  评测音节信息，只支持单词评测，YES/1表示使用此功能，默认NO不使用
  */
 @property (nonatomic, assign) BOOL isSyllable;
+
+/**
+ 录音回调时间间隔 int类型 单位毫秒
+ */
+@property (nonatomic,assign) int recordTimeinterval;
 
 @end
 

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/TALAILabVEEConfig.h</key>
 		<data>
-		XuGPB2zNcPpQEzKuk67g1NJbKnc=
+		ne3Lg/Bgl8+bE84BUmv/feqN7V8=
 		</data>
 		<key>Headers/TALAILabVEEManager.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		LLKABnm7QSTJLMTjYWTKMQhc9Eg=
+		F1eivlxf24bZhVXKOrPhLS6AX6o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,11 +35,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XuGPB2zNcPpQEzKuk67g1NJbKnc=
+			ne3Lg/Bgl8+bE84BUmv/feqN7V8=
 			</data>
 			<key>hash2</key>
 			<data>
-			l8DrrbQfDsJB4Tju8O0xjSjuHqSStUNlW8KDpzL6V/M=
+			/JyR/JSaNt5GxNFmBYPVg6XQmpOdoI+R1nB5lN8K20Q=
 			</data>
 		</dict>
 		<key>Headers/TALAILabVEEManager.h</key>
