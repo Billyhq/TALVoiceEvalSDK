@@ -37,6 +37,12 @@ typedef NS_ENUM(NSInteger, TALAILabVEEType) {
  评测完成后的结果
  */
 - (void)oralEvaluatingDidEndWithResult:(NSDictionary *)result;
+
+/**
+ 边读边评---实时回调
+ */
+-(void)oralEvaluatingRealTimeCallBack:(NSDictionary *)result;
+
 /**
  评测失败回调
  */
