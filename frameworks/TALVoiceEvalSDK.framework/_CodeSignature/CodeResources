@@ -4,17 +4,29 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/SSOralEvaluatingConfig.h</key>
+		<data>
+		JhRfNSkLxjjMGydmdM+6KLUCuVQ=
+		</data>
+		<key>Headers/SSOralEvaluatingManager.h</key>
+		<data>
+		GZqtpnYk9uuhknZdqri9ZvtXx+E=
+		</data>
+		<key>Headers/SSOralEvaluatingManagerConfig.h</key>
+		<data>
+		mYt6CJRKL6i1dMLdkH9WRhj9wfI=
+		</data>
 		<key>Headers/TALAILabVEEConfig.h</key>
 		<data>
-		ne3Lg/Bgl8+bE84BUmv/feqN7V8=
+		/Ui/nP0RT2/+FDf/MV+HJhyUc9g=
 		</data>
 		<key>Headers/TALAILabVEEManager.h</key>
 		<data>
-		uivIptFMXd28YZewkf4Clx4NKbE=
+		0R0p6SlYPdSaCEB1fCfVyG/hLso=
 		</data>
 		<key>Headers/TALAILabVEEManagerConfig.h</key>
 		<data>
-		M/EkkFVySkzaYiug9zY7mi/BZ5Q=
+		xbOXOrjZIRLXzakZ6zvWRtdyksw=
 		</data>
 		<key>Headers/TALVoiceEvalSDK.h</key>
 		<data>
@@ -22,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		F1eivlxf24bZhVXKOrPhLS6AX6o=
+		qm3Un4dqc0AJF3ilrqTGe0LpOoM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -31,37 +43,70 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/SSOralEvaluatingConfig.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			JhRfNSkLxjjMGydmdM+6KLUCuVQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			pSnraLXimd21uXj7RK0CkKJc2Iz7uMYKvphAZ/sBmHQ=
+			</data>
+		</dict>
+		<key>Headers/SSOralEvaluatingManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GZqtpnYk9uuhknZdqri9ZvtXx+E=
+			</data>
+			<key>hash2</key>
+			<data>
+			5rf8pny7OhWQ0V3f6W9N7n/4eyfvUen9EtE4hZ00UYU=
+			</data>
+		</dict>
+		<key>Headers/SSOralEvaluatingManagerConfig.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mYt6CJRKL6i1dMLdkH9WRhj9wfI=
+			</data>
+			<key>hash2</key>
+			<data>
+			vgRvny/qDkiPxhhto09kBS76vdBeysVAZ0PuouuH09o=
+			</data>
+		</dict>
 		<key>Headers/TALAILabVEEConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ne3Lg/Bgl8+bE84BUmv/feqN7V8=
+			/Ui/nP0RT2/+FDf/MV+HJhyUc9g=
 			</data>
 			<key>hash2</key>
 			<data>
-			/JyR/JSaNt5GxNFmBYPVg6XQmpOdoI+R1nB5lN8K20Q=
+			wQrDz/8nC+3m2aHo/XL0ot5QFbW3NJbtY7X01MWFkjs=
 			</data>
 		</dict>
 		<key>Headers/TALAILabVEEManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			uivIptFMXd28YZewkf4Clx4NKbE=
+			0R0p6SlYPdSaCEB1fCfVyG/hLso=
 			</data>
 			<key>hash2</key>
 			<data>
-			O17zTe66huOJsJ+ULOaVbnOh7xRgHW7pGbkOJpEDjco=
+			MCagGW7IULubHqUqV/y6G7YdA6x2/5FWn2rcjovAaA4=
 			</data>
 		</dict>
 		<key>Headers/TALAILabVEEManagerConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			M/EkkFVySkzaYiug9zY7mi/BZ5Q=
+			xbOXOrjZIRLXzakZ6zvWRtdyksw=
 			</data>
 			<key>hash2</key>
 			<data>
-			T02a7Rzp1FRriJOKsAY7D/JrWIbHwaj6AEJWTQY0ESo=
+			Lg/ub44g36lXlgXYyq0uOQkk18Bu7NhOgGZsDYUFJEQ=
 			</data>
 		</dict>
 		<key>Headers/TALVoiceEvalSDK.h</key>

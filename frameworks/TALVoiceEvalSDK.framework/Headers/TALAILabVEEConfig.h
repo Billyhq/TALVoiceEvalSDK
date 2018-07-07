@@ -76,6 +76,11 @@ typedef NS_ENUM(NSInteger, TALAILabMixedType) {
 @property (nonatomic, assign) NSUInteger rank;
 
 /**
+ 是否开启边读边评
+ */
+@property (nonatomic, assign) BOOL openFeed;
+
+/**
  用户ID(非必选 default:@"this-is-user-id"）
  */
 @property (nonatomic, copy) NSString *userId;
