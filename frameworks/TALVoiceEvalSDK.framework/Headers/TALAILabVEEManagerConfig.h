@@ -64,4 +64,9 @@ typedef NS_ENUM(NSInteger, TALAILabVEEOffLineSource) {
  */
 @property (nonatomic, assign) TALAILabVEEOffLineSource offLineSource;
 
+/**
+ 是否打印log
+ */
+@property (nonatomic,assign) BOOL isOutputLog;
+
 @end

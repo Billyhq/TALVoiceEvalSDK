@@ -143,6 +143,15 @@ typedef NS_ENUM(NSInteger, TALAILabMixedType) {
  */
 @property (nonatomic, assign) BOOL isSyllable;
 
+/**：
+ 是否由外部设置AVAudioSession category
+ 默认 NO 在sdk内部设置
+ YES 由外部设置AVAudioSession category
+ **** category 只能设置 AVAudioSessionCategoryPlayAndRecord 或者 AVAudioSessionCategoryRecord
+ **** 如果设置为YES , 必须在（ startEvaluateOralWithConfig：）开始测评方法 触发之前设置AVAudioSession category
+ */
+@property (nonatomic,assign) BOOL initiativeSetAudio;
+
 /**
  录音回调时间间隔 int类型 单位毫秒
  */

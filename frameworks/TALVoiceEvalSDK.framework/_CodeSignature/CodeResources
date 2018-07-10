@@ -4,9 +4,21 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/SSOralEvaluatingConfig.h</key>
+		<data>
+		WpoHoYQE4/pBFypZycn79ei0fb0=
+		</data>
+		<key>Headers/SSOralEvaluatingManager.h</key>
+		<data>
+		DHM3AA25gegHWqi1O5l1kWufyqw=
+		</data>
+		<key>Headers/SSOralEvaluatingManagerConfig.h</key>
+		<data>
+		yEtknjg7PnNbYnW4fzCTngerlyg=
+		</data>
 		<key>Headers/TALAILabVEEConfig.h</key>
 		<data>
-		/Ui/nP0RT2/+FDf/MV+HJhyUc9g=
+		d2bh2UzkepkD/1OFk0qi0Hyow/0=
 		</data>
 		<key>Headers/TALAILabVEEManager.h</key>
 		<data>
@@ -14,7 +26,7 @@
 		</data>
 		<key>Headers/TALAILabVEEManagerConfig.h</key>
 		<data>
-		M/EkkFVySkzaYiug9zY7mi/BZ5Q=
+		xbOXOrjZIRLXzakZ6zvWRtdyksw=
 		</data>
 		<key>Headers/TALVoiceEvalSDK.h</key>
 		<data>
@@ -22,7 +34,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		JEVzVv4eEHQZqG5+sIgPSDOvcxs=
+		uvcGKG6C+WpevYpQW2i/3JEdt5o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -31,15 +43,48 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/SSOralEvaluatingConfig.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WpoHoYQE4/pBFypZycn79ei0fb0=
+			</data>
+			<key>hash2</key>
+			<data>
+			a6thcde+bn/T8bNjT0g498tVnY8ZqEglOQMXhxNw0NM=
+			</data>
+		</dict>
+		<key>Headers/SSOralEvaluatingManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DHM3AA25gegHWqi1O5l1kWufyqw=
+			</data>
+			<key>hash2</key>
+			<data>
+			155JHbhZDBRzKejnHxXPUx1ol5XkaQcX9m+978s7hLE=
+			</data>
+		</dict>
+		<key>Headers/SSOralEvaluatingManagerConfig.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yEtknjg7PnNbYnW4fzCTngerlyg=
+			</data>
+			<key>hash2</key>
+			<data>
+			QUUpTAHEz9H126xguqJL1atouUpW+K7AcD7dUVmCRk8=
+			</data>
+		</dict>
 		<key>Headers/TALAILabVEEConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/Ui/nP0RT2/+FDf/MV+HJhyUc9g=
+			d2bh2UzkepkD/1OFk0qi0Hyow/0=
 			</data>
 			<key>hash2</key>
 			<data>
-			wQrDz/8nC+3m2aHo/XL0ot5QFbW3NJbtY7X01MWFkjs=
+			mgVAP3fxA9BEIUcnbw9YN0iG5DClo7Zak9+BsNNeQ9E=
 			</data>
 		</dict>
 		<key>Headers/TALAILabVEEManager.h</key>
@@ -57,11 +102,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			M/EkkFVySkzaYiug9zY7mi/BZ5Q=
+			xbOXOrjZIRLXzakZ6zvWRtdyksw=
 			</data>
 			<key>hash2</key>
 			<data>
-			T02a7Rzp1FRriJOKsAY7D/JrWIbHwaj6AEJWTQY0ESo=
+			Lg/ub44g36lXlgXYyq0uOQkk18Bu7NhOgGZsDYUFJEQ=
 			</data>
 		</dict>
 		<key>Headers/TALVoiceEvalSDK.h</key>
