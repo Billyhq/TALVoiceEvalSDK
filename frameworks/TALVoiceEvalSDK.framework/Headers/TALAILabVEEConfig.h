@@ -55,6 +55,17 @@ typedef NS_ENUM(NSInteger, TALAILabMixedType) {
  Options are 8000,16000,44000.
  */
 @property (nonatomic, assign) NSInteger sampleRate;
+
+/**
+ 声道 defaults is 1
+ */
+@property (nonatomic, assign) NSInteger channel;
+
+/**
+ 每采样字节数 defaults is 2,
+ */
+@property (nonatomic, assign) NSInteger sampleBytes;
+
 /**
  题型(必选）
  */
@@ -81,6 +92,17 @@ typedef NS_ENUM(NSInteger, TALAILabMixedType) {
 @property (nonatomic, assign) BOOL openFeed;
 
 /**
+ 是否开启比较音频数据，开启后会在评测完成的结果里返回和标准音频对比数据---字段： result_compare
+ ***目前仅支持 OralTypeSentence（句子）***
+ */
+@property (nonatomic, assign) BOOL openCompareAudio;
+
+/**
+ 标准音频地址---上线前需要给平台提前报备标准音频的基本信息。基本信息包括：音频文本，音频url
+ */
+@property (nonatomic, copy) NSString * stdAudioUrl;
+
+/**
  用户ID(非必选 default:@"this-is-user-id"）
  */
 @property (nonatomic, copy) NSString *userId;
@@ -101,9 +123,21 @@ typedef NS_ENUM(NSInteger, TALAILabMixedType) {
 @property (nonatomic, assign) NSUInteger typeThres;
 
 /**
+ 指定单词的发音 例如：{"conversion":"b uh k","hello":"b uh k"}，只支持单词评测。
+ */
+@property (nonatomic, copy) NSDictionary *phonesDic;
+
+/**
  答案（非必选）
  */
 @property (nonatomic, strong) NSArray<__kindof TALAILabEvaluatingAnswer *> *answerArray;
+
+/**
+ 此字段 用于英文扩展选择题 只能设置 0 和 1 (非必选 default:0）
+ 1 ：表示总分包含发音分。50% + 50% * 发音分
+ 0 ：默认值;表示总分只可能是满分或者 0 分两种情况
+ */
+@property (nonatomic, assign) NSUInteger pronScale;
 
 /**
  关键字数组（非必选）
@@ -114,6 +148,11 @@ typedef NS_ENUM(NSInteger, TALAILabMixedType) {
  要点数组（非必选）
  */
 @property (nonatomic, strong) NSArray<__kindof NSString *> *pointsArray;
+
+/**
+ 错误答案数组（非必选） pche 必选
+ */
+@property (nonatomic, strong) NSArray<__kindof NSString *> *wrongWordArray;
 
 /**
  问题 （非必选）\
@@ -131,6 +170,11 @@ typedef NS_ENUM(NSInteger, TALAILabMixedType) {
 @property (nonatomic, assign) BOOL isOutputPhonogramForSentence;
 
 /**
+ 英文单词，英文句子 是否开启音素检错
+ */
+@property (nonatomic, assign) BOOL checkPhones;
+
+/**
  重传机制类型：
  0是默认值，不重传；
  1表示重传，出现这类异常时，等待测评时间很短，重传不会影响用户体验。
@@ -143,6 +187,24 @@ typedef NS_ENUM(NSInteger, TALAILabMixedType) {
  */
 @property (nonatomic, assign) BOOL isSyllable;
 
+/**
+ 如果单词前有多个连续标点，只显示第一个标点;如果单词结尾有多个连续 标点，只输出靠近结尾单词最近的三个标点
+ 默认开启
+ */
+@property (nonatomic, assign) BOOL openSymbol;
+
+/**
+ grade  学段  1表示初中 2表示高中  非必填
+ */
+@property (nonatomic,assign) NSInteger grade;
+
+/**
+ 录音回调时间间隔 int类型 单位毫秒
+ */
+@property (nonatomic,assign) int recordTimeinterval;
+
+@property (nonatomic,copy)NSDictionary  *examParam;
+
 /**：
  是否由外部设置AVAudioSession category
  默认 NO 在sdk内部设置
@@ -152,13 +214,7 @@ typedef NS_ENUM(NSInteger, TALAILabMixedType) {
  */
 @property (nonatomic,assign) BOOL initiativeSetAudio;
 
-/**
- 录音回调时间间隔 int类型 单位毫秒
- */
-@property (nonatomic,assign) int recordTimeinterval;
-
 @end
-
 
 
 @interface TALAILabEvaluatingAnswer : NSObject
@@ -172,5 +228,7 @@ typedef NS_ENUM(NSInteger, TALAILabMixedType) {
  答案
  */
 @property (nonatomic, copy) NSString *answer;
+
+@property (nonatomic,assign)BOOL isGinger;
 
 @end

@@ -75,7 +75,7 @@ typedef NS_ENUM(NSInteger, offLineSource) {
 
 
 /**
- 是否打印log
+ 是否打印log，并在本地记录报错日志（日志路径 ~/Documents/SSError）
  */
 @property (nonatomic,assign) BOOL isOutputLog;
 

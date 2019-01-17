@@ -35,6 +35,11 @@ typedef NS_ENUM(NSInteger, TALAILabVEEOffLineSource) {
 @property (nonatomic, assign) NSTimeInterval serverTimeout;
 
 /**
+ 连接超时时间 default is 20s
+ */
+@property (nonatomic, assign) NSTimeInterval connectTimeout;
+
+/**
  开启关闭vad,default is NO
  */
 @property (nonatomic, assign) BOOL vad;
@@ -65,8 +70,13 @@ typedef NS_ENUM(NSInteger, TALAILabVEEOffLineSource) {
 @property (nonatomic, assign) TALAILabVEEOffLineSource offLineSource;
 
 /**
- 是否打印log
+ 是否打印log，并在本地记录报错日志（日志路径 ~/Documents/SSError）
  */
 @property (nonatomic,assign) BOOL isOutputLog;
+
+/**
+ 允许使用动态服务器配置，设为YES时，无需手动配置服务器地址，将会自动从服务器获取可用地址。
+ */
+@property (nonatomic,assign)BOOL allowDynamicService;
 
 @end

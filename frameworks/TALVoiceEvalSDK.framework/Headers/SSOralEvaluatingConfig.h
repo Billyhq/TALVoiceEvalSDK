@@ -1,4 +1,4 @@
- //
+//
 //  SSOralEvaluatingConfig.h
 //  singSoundDemo
 //
@@ -21,7 +21,7 @@ typedef NS_ENUM(NSInteger, OralType) {
     OralTypeChinesePcha,                            //中文有限分支识别评测,这个题型需要设置anwserArr
     OralTypeChinesePred,                            //中文段落
     OralTypeEnglishPcha,                            //英文有限分支识别评测,这个题型需要设置anwserArr
-    OralTypeAlpha,                                  //字母评测
+    OralTypeAlpha,                                  //音标评测
     OralTypeRec,                                    //自由识别
     OralTypePcha,                                   //句子选读
     OralTypeRetell,                                 //故事复述
@@ -57,6 +57,17 @@ typedef NS_ENUM(NSInteger, MixedType) {
  Options are 8000,16000,44000.
  */
 @property (nonatomic, assign) NSInteger sampleRate;
+
+/**
+ 声道 defaults is 1
+ */
+@property (nonatomic, assign) NSInteger channel;
+
+/**
+ 每采样字节数 defaults is 2,
+ */
+@property (nonatomic, assign) NSInteger sampleBytes;
+
 /**
  题型(必选）
  */
@@ -82,6 +93,17 @@ typedef NS_ENUM(NSInteger, MixedType) {
  是否开启边读边评，实时返回数据，目前支持 句子、段落类型
  */
 @property (nonatomic, assign) BOOL openFeed;
+
+/**
+ 是否开启比较音频数据，开启后会在评测完成的结果里返回和标准音频对比数据---字段： result_compare
+ ***目前仅支持 OralTypeSentence（句子）***
+ */
+@property (nonatomic, assign) BOOL openCompareAudio;
+
+/**
+ 标准音频地址---上线前需要给平台提前报备标准音频的基本信息。基本信息包括：音频文本，音频url
+ */
+@property (nonatomic, copy) NSString * stdAudioUrl;
 
 /**
  用户ID(非必选 default:@"this-is-user-id"）
@@ -153,6 +175,12 @@ typedef NS_ENUM(NSInteger, MixedType) {
 @property (nonatomic, assign) BOOL isOutputPhonogramForSentence;
 
 /**
+ 英文单词，英文句子 是否开启音素检错
+ */
+@property (nonatomic, assign) BOOL checkPhones;
+
+
+/**
  重传机制类型：
  0 不重传；
  1表示重传，出现这类异常时，等待测评时间很短，重传不会影响用户体验。默认1
@@ -164,6 +192,14 @@ typedef NS_ENUM(NSInteger, MixedType) {
  评测音节信息，只支持单词评测，YES/1表示使用此功能，默认NO不使用
  */
 @property (nonatomic,assign)BOOL isSyllable;
+
+/**
+ 如果单词前有多个连续标点，只显示第一个标点;如果单词结尾有多个连续 标点，只输出靠近结尾单词最近的三个标点
+ 默认开启
+ */
+@property (nonatomic, assign) BOOL openSymbol;
+
+
 
 /**
  grade  学段  1表示初中 2表示高中  非必填

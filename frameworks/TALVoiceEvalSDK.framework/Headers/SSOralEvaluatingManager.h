@@ -76,6 +76,21 @@ typedef NS_ENUM(NSInteger, OralEvaluatingType) {
  */
 - (void)startEvaluateOralWithWavPath:(NSString *)wavPath config:(SSOralEvaluatingConfig *)config;
 
+
+/**
+ 开始评测--不开启录音，需要外部通过- (void)feedAudioToEvaluateWithData:(NSData *)data;传输音频数据到服务器
+ 
+ @param config 评测配置
+ */
+- (void)startNoAudioStreamEvaluateOralWithConfig:(SSOralEvaluatingConfig *)config;
+
+/**
+ 传输音频数据（NSData类型）给测评服务器
+ 注1：使用此方法前，确认通过（- (void)startNoAudioStreamEvaluateOralWithConfig）开启测评
+ 注2：当每次传输音频数据过大时，ServerTimeout时间要设置长一些。
+ */
+- (void)feedAudioToEvaluateWithData:(NSData *)data;
+
 /**
  停止评测，返回结果
  */
@@ -105,7 +120,6 @@ typedef NS_ENUM(NSInteger, OralEvaluatingType) {
  @return 本地录音路径
  */
 + (NSString *)recordPathWithTokenId:(NSString *)tokenId;
-
 
 @end
 
@@ -169,7 +183,7 @@ typedef NS_ENUM(NSInteger, OralEvaluatingType) {
 - (void)oralEvaluatingDidRecorderWillTimeOut;
 
 /**
- 录音音量大小回调
+ 录音文件id回调
  */
 - (void)oralEvaluatingReturnRecordId: (NSString *)recordId;
 

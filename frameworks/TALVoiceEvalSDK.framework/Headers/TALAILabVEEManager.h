@@ -10,72 +10,13 @@
 #import "TALAILabVEEConfig.h"
 #import "TALAILabVEEManagerConfig.h"
 
+@protocol TALAILabVEEManagerDelegate;
+
 typedef NS_ENUM(NSInteger, TALAILabVEEType) {
     TALAILabVEETypeTypeOffLine   = 1,     //离线
     TALAILabVEETypeTypeLine      = 2,     //在线
     TALAILabVEETypeTypeMixed     = 3,    //混合模式
 };
-
-@protocol TALAILabVEEManagerDelegate <NSObject>
-
-@optional
-
-/**
- 引擎初始化成功
- */
-- (void)oralEvaluatingInitSuccess;
-
-/**
- 评测开始
- */
-- (void)oralEvaluatingDidStart;
-/**
- 评测停止
- */
-- (void)oralEvaluatingDidStop;
-/**
- 评测完成后的结果
- */
-- (void)oralEvaluatingDidEndWithResult:(NSDictionary *)result;
-
-/**
- 边读边评---实时回调
- */
--(void)oralEvaluatingRealTimeCallBack:(NSDictionary *)result;
-
-/**
- 评测失败回调
- */
-- (void)oralEvaluatingDidEndError:(NSError *)error;
-
-/**
- 录音数据回调
- */
-- (void)oralEvaluatingRecordingBuffer:(NSData *)recordingData;
-
-/**
- 录音音量大小回调
- */
-- (void)oralEvaluatingDidUpdateVolume:(int)volume;
-
-/**
- VAD(前置时间）超时回调
- */
-- (void)oralEvaluatingDidVADFrontTimeOut;
-
-/**
- VAD(后置时间）超时回调
- */
-- (void)oralEvaluatingDidVADBackTimeOut;
-
-/**
- 录音即将超时（只支持在线模式，单词20s，句子40s)
- */
-- (void)oralEvaluatingDidRecorderWillTimeOut;
-
-@end
-
-
 
 @interface TALAILabVEEManager : NSObject
 
@@ -136,6 +77,20 @@ typedef NS_ENUM(NSInteger, TALAILabVEEType) {
 - (void)startEvaluateOralWithWavPath:(NSString *)wavPath config:(TALAILabVEEConfig *)config;
 
 /**
+ 开始评测--不开启录音，需要外部通过- (void)feedAudioToEvaluateWithData:(NSData *)data;传输音频数据到服务器
+ 
+ @param config 评测配置
+ */
+- (void)startNoAudioStreamEvaluateOralWithConfig:(TALAILabVEEConfig *)config;
+
+/**
+ 传输音频数据（NSData类型）给测评服务器
+ 注1：使用此方法前，确认通过（- (void)startNoAudioStreamEvaluateOralWithConfig）开启测评
+ 注2：当每次传输音频数据过大时，ServerTimeout时间要设置长一些。
+ */
+- (void)feedAudioToEvaluateWithData:(NSData *)data;
+
+/**
  停止评测，返回结果
  */
 - (void)stopEvaluate;
@@ -151,7 +106,7 @@ typedef NS_ENUM(NSInteger, TALAILabVEEType) {
 - (void)engineDealloc;
 
 /**
- 清除所有录音文件（只针对调用startEvaluateOralWithConfig:)
+ 清除所有录音文件（只针对调用startEvaluateOralWithConfig:(SSOralEvaluatingConfig *)config)
  
  @return YES is Success
  */
@@ -164,5 +119,69 @@ typedef NS_ENUM(NSInteger, TALAILabVEEType) {
  @return 本地录音路径
  */
 + (NSString *)recordPathWithTokenId:(NSString *)tokenId;
+
+@end
+
+@protocol TALAILabVEEManagerDelegate <NSObject>
+
+@optional
+
+/**
+ 引擎初始化成功
+ */
+- (void)oralEvaluatingInitSuccess;
+
+/**
+ 评测开始
+ */
+- (void)oralEvaluatingDidStart;
+/**
+ 评测停止
+ */
+- (void)oralEvaluatingDidStop;
+/**
+ 评测完成后的结果
+ */
+- (void)oralEvaluatingDidEndWithResult:(NSDictionary *)result isLast:(BOOL)isLast;
+
+/**
+ 边读边评---实时回调
+ */
+-(void)oralEvaluatingRealTimeCallBack:(NSDictionary *)result;
+
+/**
+ 评测失败回调
+ */
+- (void)oralEvaluatingDidEndError:(NSError *)error;
+
+/**
+ 录音数据回调
+ */
+- (void)oralEvaluatingRecordingBuffer:(NSData *)recordingData;
+
+/**
+ 录音音量大小回调
+ */
+- (void)oralEvaluatingDidUpdateVolume:(int)volume;
+
+/**
+ VAD(前置时间）超时回调
+ */
+- (void)oralEvaluatingDidVADFrontTimeOut;
+
+/**
+ VAD(后置时间）超时回调
+ */
+- (void)oralEvaluatingDidVADBackTimeOut;
+
+/**
+ 录音即将超时（只支持在线模式，单词20s，句子40s)
+ */
+- (void)oralEvaluatingDidRecorderWillTimeOut;
+
+/**
+ 录音文件id回调
+ */
+- (void)oralEvaluatingReturnRecordId: (NSString *)recordId;
 
 @end
