@@ -142,7 +142,7 @@ typedef NS_ENUM(NSInteger, TALAILabVEEType) {
 /**
  评测完成后的结果
  */
-- (void)oralEvaluatingDidEndWithResult:(NSDictionary *)result isLast:(BOOL)isLast;
+- (void)oralEvaluatingDidEndWithResult:(NSDictionary *)result;
 
 /**
  边读边评---实时回调
